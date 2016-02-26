@@ -4,6 +4,14 @@ app.use(express.static('public'));
 
 var db = require('./db.js');
 
+app.post('/tech-form', function(req, res){
+	console.log("tech contest entry posted");
+});
+
+app.post('/receipe-form', function(req, res){
+	console.log("receipe posted");
+});
+
 app.get('/update', function (req, res) {
 	db.update();
 });

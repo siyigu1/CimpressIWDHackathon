@@ -1,0 +1,19 @@
+{
+  "name": "cimpressiwdhackathon",
+  "version": "1.0.0",
+  "description": "hackathon project for cimpress wit interational women's day celebration",
+  "main": "app.js",
+  "scripts": {
+    "test": "console.log(\"hello!\");"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siyigu1/CimpressIWDHackathon.git"
+  },
+  "author": "Cimpress WIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siyigu1/CimpressIWDHackathon/issues"
+  },
+  "homepage": "https://github.com/siyigu1/CimpressIWDHackathon#readme"
+}

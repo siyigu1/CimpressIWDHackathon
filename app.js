@@ -13,7 +13,12 @@ app.post('/receipe-form', function(req, res){
 });
 
 app.get('/update', function (req, res) {
-	db.update();
+	var information = {};
+	information.name = "test name";
+	information.email = "some email";
+	information.office = "some office";
+	information.file = "some file";
+	db.update(information);
 });
 
 app.get('/connect', function(req, res){

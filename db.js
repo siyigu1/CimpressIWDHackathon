@@ -1,24 +1,48 @@
 var Db = function () {};
+
+//AWS SDK
 var AWS = require('aws-sdk');
 AWS.config.update({region:'us-west-2'});
 
-var md5 = require("blueimp-md5");
+//MD5 package
+var md5 = require("blueimp-md5"); 
 
-Db.prototype.update = function(information){
+function Db () {
+	message = ""; 
+}
+
+Db.prototype.update = function(information, table, after){
+
 	information.time = Date.now();
-	information.entryId = md5(Date.now());
+	information.entry_id = md5(Date.now());
 	console.log(information);
 
-/*
+	var params = {
+		TableName: table,
+		Item: information
+	};
+
 	var docClient = new AWS.DynamoDB.DocumentClient();
 
-	
+	var message = "";
     docClient.put(params, function(err, data) {
+    	var result;
     	if (err) {
-        	console.error("Unable to add movie", movie.title, ". Error JSON:", JSON.stringify(err, null, 2));
+        	message = "Unable to save entry "
+        					+ information.entryId
+        					+ ". Error JSON:"
+        					+ JSON.stringify(err, null, 2)
+    						+ "\n";
+    		console.log(message);
+    		result = false;
        	} else {
-        	console.log("PutItem succeeded:", movie.title);
+        	message += "Entry saved successfully: " + information.entry_id;
+        	console.log(message);
+        	result = true;
        	}
-	});*/
+
+       	after(result);
+	});
 };
+
 module.exports = new Db();

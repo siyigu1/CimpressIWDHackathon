@@ -16,6 +16,7 @@ $(document).ready(function(){
 			"Authentication": "Token 7Kx0RD6hOmeHKrsEG-DpdUX6C0Sw3IKU"
 		}
 
+		// Test
 		$.ajax({
 		  type: "POST",
 		  url: url,

@@ -1,0 +1,58 @@
+.two-columns
+{
+	margin-bottom: 20px;
+    text-align: center;
+	width: 50%;
+	float: left;
+	font-family: Arial, sans-serif;
+}
+
+.title
+{
+	float: left;
+	font-family: Arial, sans-serif;
+}
+
+.center-column 
+{
+	width: 80% ;
+	margin-left: auto ;
+	margin-right: auto ;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+#logo
+{
+	width: 8%;
+	height:8%;
+}
+
+.title h1
+{
+	color: white;
+	font-size: 37px;
+    line-height: 150px;
+	
+}
+
+.center-container
+{
+	padding-top:40px;
+	font-family: Arial, sans-serif;
+}
+
+.feature-heading
+{
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -1px;
+	font-size: 50px;
+	font-family: Arial, sans-serif;
+}
+
+.colored-text
+{
+	color:red;
+	font-weight:bold;
+}
